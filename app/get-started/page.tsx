@@ -119,9 +119,6 @@ export default function GetStarted() {
         >
           <CheckCircle className="w-20 h-20 text-green-500 mx-auto mb-6" />
           <h2 className="text-3xl font-bold mb-3">Application Received!</h2>
-          <p className="text-gray-400">
-            Thank you. We will reach out to you within 24 hours.
-          </p>
         </motion.div>
       </main>
     );

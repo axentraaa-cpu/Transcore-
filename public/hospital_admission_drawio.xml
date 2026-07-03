@@ -1,0 +1,244 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- TITLE -->
+    <mxCell id="title" value="Hospital Patient Admission Process — UML Activity Diagram (Swim Lanes)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;fontStyle=1;fontColor=#1a237e;" vertex="1" parent="1">
+      <mxGeometry x="20" y="10" width="1600" height="35" as="geometry"/>
+    </mxCell>
+
+    <!-- ===================== SWIM LANES (horizontal layout) ===================== -->
+
+    <!-- Patient Lane -->
+    <mxCell id="lane_p" value="Patient" style="swimlane;startSize=60;horizontal=0;fillColor=#fffde7;strokeColor=#f9a825;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+      <mxGeometry x="20" y="50" width="1600" height="130" as="geometry"/>
+    </mxCell>
+    <!-- Reception Lane -->
+    <mxCell id="lane_r" value="Reception" style="swimlane;startSize=60;horizontal=0;fillColor=#e8f5e9;strokeColor=#43a047;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+      <mxGeometry x="20" y="180" width="1600" height="130" as="geometry"/>
+    </mxCell>
+    <!-- Nurse Lane -->
+    <mxCell id="lane_n" value="Nurse" style="swimlane;startSize=60;horizontal=0;fillColor=#fff3e0;strokeColor=#ef6c00;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+      <mxGeometry x="20" y="310" width="1600" height="130" as="geometry"/>
+    </mxCell>
+    <!-- Doctor Lane -->
+    <mxCell id="lane_d" value="Doctor" style="swimlane;startSize=60;horizontal=0;fillColor=#fce4ec;strokeColor=#c62828;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+      <mxGeometry x="20" y="440" width="1600" height="160" as="geometry"/>
+    </mxCell>
+    <!-- Ward Staff Lane -->
+    <mxCell id="lane_w" value="Ward Staff" style="swimlane;startSize=60;horizontal=0;fillColor=#ede7f6;strokeColor=#6a1b9a;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+      <mxGeometry x="20" y="600" width="1600" height="130" as="geometry"/>
+    </mxCell>
+    <!-- Pharmacy Lane -->
+    <mxCell id="lane_ph" value="Pharmacy" style="swimlane;startSize=60;horizontal=0;fillColor=#e3f2fd;strokeColor=#1565c0;fontStyle=1;fontSize=12;align=center;" vertex="1" parent="1">
+      <mxGeometry x="20" y="730" width="1600" height="130" as="geometry"/>
+    </mxCell>
+
+    <!-- ===================== NODES ===================== -->
+
+    <!-- START (filled circle) in Patient lane -->
+    <mxCell id="start" value="" style="ellipse;aspect=fixed;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="90" y="105" width="30" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- 1. Patient: Arrive at Hospital -->
+    <mxCell id="p1" value="Arrive at Hospital" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffde7;strokeColor=#f9a825;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="155" y="100" width="130" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- 2. Reception: Register Patient -->
+    <mxCell id="r1" value="Register Patient" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#43a047;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="155" y="230" width="130" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- 3. Nurse: Check Vital Signs -->
+    <mxCell id="n1" value="Check Vital Signs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ef6c00;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="380" y="360" width="130" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- 4. Doctor: Examine Patient -->
+    <mxCell id="d1" value="Examine Patient" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c62828;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="600" y="500" width="130" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- 5. Doctor: Decision Diamond -->
+    <mxCell id="dec" value="Admit or&#xa;Discharge?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c62828;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="800" y="480" width="120" height="80" as="geometry"/>
+    </mxCell>
+
+    <!-- ---- DISCHARGE PATH ---- -->
+
+    <!-- 6. Doctor: Prescribe Medicine -->
+    <mxCell id="d2" value="Prescribe Medicine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c62828;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1010" y="500" width="130" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- 7. Pharmacy: Dispense Medicine -->
+    <mxCell id="ph1" value="Dispense Medicine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1010" y="780" width="130" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- 8. Patient: Collect Medicine -->
+    <mxCell id="p2" value="Collect Medicine&#xa;from Pharmacy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffde7;strokeColor=#f9a825;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1200" y="100" width="130" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- ---- ADMIT PATH ---- -->
+
+    <!-- FORK BAR (thick horizontal bar = parallel split) -->
+    <mxCell id="fork" value="" style="shape=mxgraph.flowchart.start_2;fillColor=#000000;strokeColor=#000000;pointerEvents=0;" vertex="1" parent="1">
+      <mxGeometry x="965" y="516" width="14" height="8" as="geometry"/>
+    </mxCell>
+
+    <!-- 9. Doctor: Order Tests (parallel) -->
+    <mxCell id="d3" value="Order Tests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c62828;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1010" y="455" width="130" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- 10. Ward Staff: Assign Bed (parallel) -->
+    <mxCell id="w1" value="Assign Bed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede7f6;strokeColor=#6a1b9a;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1010" y="640" width="130" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- JOIN BAR -->
+    <mxCell id="join" value="" style="shape=mxgraph.flowchart.start_2;fillColor=#000000;strokeColor=#000000;pointerEvents=0;" vertex="1" parent="1">
+      <mxGeometry x="1185" y="516" width="14" height="8" as="geometry"/>
+    </mxCell>
+
+    <!-- 11. Patient: Complete Treatment and Discharge -->
+    <mxCell id="p3" value="Complete Treatment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffde7;strokeColor=#f9a825;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1380" y="100" width="130" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- MERGE DIAMOND -->
+    <mxCell id="merge" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="1545" y="98" width="30" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- 12. Patient: Discharged -->
+    <mxCell id="p4" value="Discharged" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="1530" y="230" width="110" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- END (bull's eye) -->
+    <mxCell id="end" value="" style="ellipse;aspect=fixed;fillColor=#ffffff;strokeColor=#000000;strokeWidth=4;" vertex="1" parent="1">
+      <mxGeometry x="1570" y="305" width="30" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- ===================== EDGES ===================== -->
+
+    <!-- Start → Arrive at Hospital -->
+    <mxCell id="e1" edge="1" source="start" target="p1" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Patient arrives → Reception registers (cross-lane arrow) -->
+    <mxCell id="e2" edge="1" source="p1" target="r1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points"><mxPoint x="220" y="180"/><mxPoint x="220" y="250"/></Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Reception registers → Nurse checks vitals (cross-lane) -->
+    <mxCell id="e3" edge="1" source="r1" target="n1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points"><mxPoint x="445" y="310"/><mxPoint x="445" y="380"/></Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Nurse vitals → Doctor examines (cross-lane) -->
+    <mxCell id="e4" edge="1" source="n1" target="d1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points"><mxPoint x="665" y="440"/><mxPoint x="665" y="520"/></Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Doctor examines → Decision -->
+    <mxCell id="e5" edge="1" source="d1" target="dec" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Decision → Prescribe Medicine [Discharge] -->
+    <mxCell id="e6" value="(b) Discharge" style="fontStyle=1;fontSize=9;fontColor=#c62828;" edge="1" source="dec" target="d2" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Prescribe → Dispense (cross-lane Doctor → Pharmacy) -->
+    <mxCell id="e7" edge="1" source="d2" target="ph1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points"><mxPoint x="1075" y="730"/></Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Dispense → Collect (cross-lane Pharmacy → Patient) -->
+    <mxCell id="e8" edge="1" source="ph1" target="p2" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points"><mxPoint x="1265" y="780"/><mxPoint x="1265" y="180"/></Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Collect Medicine → Merge -->
+    <mxCell id="e9" edge="1" source="p2" target="merge" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Decision → FORK [Admit] -->
+    <mxCell id="e10" value="(a) Admit" style="fontStyle=1;fontSize=9;fontColor=#6a1b9a;" edge="1" source="dec" target="fork" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- FORK → Order Tests -->
+    <mxCell id="e11" edge="1" source="fork" target="d3" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points"><mxPoint x="972" y="475"/><mxPoint x="1010" y="475"/></Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- FORK → Assign Bed (cross-lane Doctor → Ward Staff) -->
+    <mxCell id="e12" edge="1" source="fork" target="w1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points"><mxPoint x="972" y="660"/><mxPoint x="1010" y="660"/></Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Order Tests → JOIN -->
+    <mxCell id="e13" edge="1" source="d3" target="join" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points"><mxPoint x="1192" y="475"/><mxPoint x="1192" y="516"/></Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Assign Bed → JOIN (cross-lane Ward → Doctor) -->
+    <mxCell id="e14" edge="1" source="w1" target="join" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points"><mxPoint x="1192" y="660"/><mxPoint x="1192" y="524"/></Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- JOIN → Complete Treatment (cross-lane Doctor → Patient) -->
+    <mxCell id="e15" edge="1" source="join" target="p3" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points"><mxPoint x="1445" y="520"/><mxPoint x="1445" y="120"/></Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Complete Treatment → Merge -->
+    <mxCell id="e16" edge="1" source="p3" target="merge" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Merge → Discharged -->
+    <mxCell id="e17" edge="1" source="merge" target="p4" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points"><mxPoint x="1560" y="180"/><mxPoint x="1585" y="230"/></Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Discharged → END -->
+    <mxCell id="e18" edge="1" source="p4" target="end" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+  </root>
+</mxGraphModel>
